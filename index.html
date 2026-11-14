@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>🏫 Weekly Schedule </title>
+    </head>
+    <body>
+        <div class="main">
+            <p id="dayp">شنبه : 0 | یکشنبه : 1 | دوشنبه : 2 | سه شنبه : 3 | چهارشنبه : 4</p>
+            <label for="inpday" id="labday">روز : </label>
+            <input type="number" placeholder="Day..." id="inpday" min="0" max="4">
+            <br><br><button id="dayb" onclick="week()">کلیک</button>
+            <div class="week">
+                <p id="z1">↓ زنگ اول</p>
+                <p id="z2">↓ زنگ دوم</p>
+                <p id="z3">↓ زنگ سوم</p>
+                <p id="b1">روز را وارد کنید</p>
+                <p id="b2">روز را وارد کنید</p>
+                <p id="b3">روز را وارد کنید</p>
+            </div>
+            <div class="dev">
+                <p id="name">❤️ علی اصغریان</p>
+                <p id="tav">ساخته شده توسط</p>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
