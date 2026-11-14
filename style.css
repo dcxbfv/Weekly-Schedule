@@ -128,3 +128,14 @@ body {
         font-size: 1.2em;
     }
 }
+@media screen and (max-width:400px){
+    #dayb{
+        width:18.75%
+    }
+    #tav , #name {
+        font-size: 1em;
+    }
+    #dayp{
+        font-size: 1em;
+    }
+}
