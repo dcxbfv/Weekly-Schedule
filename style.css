@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    min-height: 100vh;
+    background:radial-gradient(
+        circle at 15% 75%,
+        darkcyan,
+        transparent 22%
+    ),
+    radial-gradient(
+        circle at 75% 15%,
+        rgb(0, 247, 255),
+        transparent 22%
+    ),
+    radial-gradient(
+        circle at 80% 83%,
+        aquamarine,
+        transparent 22%
+    ),
+    linear-gradient(135deg , aqua ,teal);
+}
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+#dayinp {
+    background: linear-gradient(135deg , wheat , #555) padding-box,
+    conic-gradient(from var(--angle), deeppink,yellow,deeppink);
+    position: absolute;
+    width: 5%;
+    right: 48%;
+    top: 10%; 
+    width: 7%;
+    text-align:center;
+    padding: 0.3%;
+    border: 4px solid transparent;
+    border-radius: 7px;
+    animation:spin 2s linear infinite;
+    font-family: sans-serif;
+}
+#dayinp:focus {
+    outline: none;
+    right:45.6%;
+    width:10%;
+    transition: width 1s ease;
+    
+}
+@keyframes spin {
+    to {
+        --angle : 360deg
+    }
+}
+#dayp {
+    font-size: 1.2em;
+    top:-0.05%;
+    position: absolute;
+    right: 35%;
+    font-family: sans-serif;
+}
+#dayb{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    right: 49.5%;
+    top: 17%;
+    background: linear-gradient(#333,#333) padding-box,
+    conic-gradient(from var(--angle), #555, rgb(228, 156, 0));
+    border: 4px solid transparent;
+    color: #fff;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    to {
+        --angle: 360deg;
+    }
+}
+#daylab {
+    position: absolute;
+    right: 56%;
+    top: 11%;
+    font-size: 1.4em; 
+    font-family: sans-serif;
+    color: #333;
+}
+.schedule {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    max-width: 1100px;
+    margin: 200px auto;
+    text-align: center;
+}
+.schedule > p {
+    font-family:sans-serif;
+    color: black;
+    border: 10px solid transparent;
+    font-size: 1.75em;
+    background: linear-gradient(135deg , red , orange , orangered) padding-box , 
+    conic-gradient(from var(--angle), #444,grey, #444  ) border-box;
+    margin: 0.3em;
+    padding: 2%;
+    border-radius: 20px;
+    animation:spin 2s linear infinite;
+    text-shadow: 0px 0px 10px goldenrod,
+                 0px 0px 20px goldenrod,
+                 0px 0px 40px goldenrod;
+}
+@keyframes spin {
+    to {
+        --angle:360deg;
+    }
+}
+.dev {
+    display: flex;
+    text-align: center;
+    margin: -10% auto;
+}
+.dev  p{
+    animation: spina 2s ease infinite;
+    flex:1;
+    font-size: 1.5em;
+}
+@keyframes spina{
+    100% {
+        transform:rotateX(360deg)
+    }
+}
+#tav{
+    text-shadow: 0px 0px 10px #0f0,
+                 0px 0px 20px #0f0,
+                 0px 0px 40px #0f0;
+}
+#name{
+    text-shadow: 0px 0px 10px gold,
+                 0px 0px 20px gold,
+                 0px 0px 40px gold;
+}
+
+/* لپ تاپ */
+@media (max-width:1104px){
+    #dayp {
+        font-size: 1.02em;
+    }
+    #dayb{
+        top: 18%;
+    }
+    .dev {
+        margin: -18% auto;
+    }
+}
+/* تبلت */
+@media (max-width:820px){
+    #dayp {
+        right:30%
+    }
+    #dayinp{
+        width: 9%;
+        right: 46%;
+    }
+    #dayinp:focus{
+        right: 42%;
+        width: 13%;
+    }
+    .dev {
+        margin: -23% auto;
+    }
+}
+/* موبایل بزرگ */
+@media (max-width:650px){
+    #dayp {
+        right:25%;
+    }
+    #dayinp{
+        width:12%;
+        right:42%
+    }
+    #dayinp:focus{
+        right: 38%;
+        width: 17%;
+    }
+    .dev {
+        margin: -30% auto;
+    }
+}
+/* موبایل کوچک */
+@media (max-width:480px){
+    #dayp {
+        right: 15%;
+    }
+    #daylab {
+        top:10%
+    }
+    #dayinp{
+        width:15%;
+        right:38%
+    }
+    #dayinp:focus{
+        right: 36%;
+        width: 19%;
+    }
+    .schedule > p {
+        font-size: 1.5em;
+    }
+    #dayb{
+        right:45%
+    }
+    .dev {
+        margin: -35% auto;
+    }
+}
